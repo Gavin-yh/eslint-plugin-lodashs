@@ -1,0 +1,27 @@
+{
+  "name": "eslint-plugin-lodashs",
+  "version": "0.0.1",
+  "description": "eslint-plugin-lodashs",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "eslint-plugin-lodashs"
+  ],
+  "author": "Gavin",
+  "main": "lib/index.js",
+  "bin": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.vue --cache . --fix",
+    "test": "jest --verbose"
+  },
+  "dependencies": {
+    "babel-eslint": "10.1.0",
+    "requireindex": "1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "7.1.0",
+    "jest": "26.6.3"
+  },
+  "license": "ISC"
+}
