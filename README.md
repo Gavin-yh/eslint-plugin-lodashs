@@ -12,7 +12,9 @@
 ## 简介
 关于lodash工具函数的lint。
 
-如：get函数，取默认值。
+如：get函数，取默认值。 
+
+官方解释：Gets the value at path of object. If the resolved value is undefined, the defaultValue is returned in its place.（在获取的值是undefined时，则返回默认值)
 
 ```js
 import _ from 'lodash'
@@ -46,6 +48,21 @@ if (c.length) {  // Error: Uncaught TypeError: Cannot read properties of null (r
 ```
 
 在常规的业务里很经常用到get函数，但是写法不注意，可能会导致代码不够健壮，会有隐患存在。这时项目如果有eslint，我们就可以让工具帮我们`检测`和`修复`有问题的代码。
+
+健壮的代码如：
+```js
+import _ from 'lodash'
+
+let a = {
+  b: null
+}
+
+let c = _.get(a, 'b') || '默认值'
+
+if (c.length) {
+  // TODO
+}
+```
 
 </br>
 
